@@ -10,39 +10,40 @@
 <body>
     
     <div class="calculator">
-        <input type="text" placeholder="0">
+        <input type="text" placeholder="0" id="inputbox">
         <div>
-            <button class="operator">AC</button>
-            <button class="operator">DEL</button>
-            <button class="operator">%</button>
-            <button class="operator">/</button>
+            <button class="operator" onclick="inputbox.value = '' ">AC</button>
+            <button class="operator" onclick="inputbox.value = inputbox.value.toString().slice(0,-1) ">DEL</button>
+            <button class="operator" onclick="inputbox.value += '%' ">%</button>
+            <button class="operator" onclick="inputbox.value += '/' ">/</button>
         </div>
         <div>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="operator">*</button>
+            <button onclick="inputbox.value += '7' ">7</button>
+            <button onclick="inputbox.value += '8' ">8</button>
+            <button onclick="inputbox.value += '9' ">9</button>
+            <button class="operator" onclick="inputbox.value += '*' ">*</button>
         </div>
         <div>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="operator">-</button>
+            <button onclick="inputbox.value += '4' ">4</button>
+            <button onclick="inputbox.value += '5' ">5</button>
+            <button onclick="inputbox.value += '6' ">6</button>
+            <button class="operator" onclick="inputbox.value += '-' ">-</button>
         </div>
         <div>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="operator">+</button>
+            <button onclick="inputbox.value += '1' ">1</button>
+            <button onclick="inputbox.value += '2' ">2</button>
+            <button onclick="inputbox.value += '3' ">3</button>
+            <button class="operator" onclick="inputbox.value += '+' ">+</button>
         </div>
         <div>
-            <button>00</button>
-            <button>0</button>
-            <button>.</button>
-            <button class="equalbtn">=</button>
+            <button onclick="inputbox.value += '00' ">00</button>
+            <button onclick="inputbox.value += '0' ">0</button>
+            <button onclick="inputbox.value += '.' ">.</button>
+            <button class="equalbtn" onclick="inputbox.value = eval(inputbox.value)">=</button>
         </div>
     </div>
+    
 
-
+     <script src="script.js"></script>
 </body>
 </html>

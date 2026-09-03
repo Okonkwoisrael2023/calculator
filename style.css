@@ -15,7 +15,7 @@ body {
 
 .calculator {
     border: 1px solid #717377;
-    padding: 20px;
+    padding: 18px;
     border-radius: 15px;
     background: transparent;
     box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
@@ -28,10 +28,11 @@ input {
     margin: 10px;
     background: transparent;
     box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.2);
-    font-size: 40px;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: right;
     cursor: pointer;
-
+    color: whitesmoke;
 }
 
 input::placeholder {
@@ -46,7 +47,7 @@ button {
     border-radius: 50%;
     background: transparent;
     color: whitesmoke;
-    font-size: 20px;
+    font-size: 24px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
 }
 
