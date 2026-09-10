@@ -12,7 +12,7 @@
     <div class="calculator">
         <input type="text" placeholder="0" id="inputbox">
         <div>
-            <button class="operator" onclick="inputbox.value = '' ">AC</button>
+            <button class="operator" onclick="clearCalculator()">AC</button>
             <button class="operator" onclick="inputbox.value = inputbox.value.toString().slice(0,-1) ">DEL</button>
             <button class="operator" onclick="inputbox.value += '%' ">%</button>
             <button class="operator" onclick="inputbox.value += '/' ">/</button>
@@ -39,7 +39,7 @@
             <button onclick="inputbox.value += '00' ">00</button>
             <button onclick="inputbox.value += '0' ">0</button>
             <button onclick="inputbox.value += '.' ">.</button>
-            <button class="equalbtn" onclick="inputbox.value = eval(inputbox.value)">=</button>
+            <button class="equalbtn" onclick="calculate()">=</button>
         </div>
     </div>
     
