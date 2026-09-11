@@ -21,11 +21,11 @@ body {
     box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
 }
 
-input {
+.inputbox {
     width: 320px;
     border: none;
-    padding: 24px;
-    margin: 10px;
+    padding: 34px;
+    margin: 20px;
     background: transparent;
     box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.2);
     font-size: 50px;
@@ -35,7 +35,7 @@ input {
     color: whitesmoke;
 }
 
-input::placeholder {
+.inputbox::placeholder {
     color: #ffffff;
 }
 
