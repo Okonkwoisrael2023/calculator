@@ -4,14 +4,12 @@ const historyList = document.getElementById("historyList");
 const toggleHistoryBtn = document.getElementById("toggleHistory");
 const clearAllBtn = document.getElementById("clearAllHistory");
 
-let calcHistory = JSON.parse(localStorage.getItem("calcHistory"));
-
+let calcHistory = JSON.parse(localStorage.getItem("calcHistory")) || [];
 
 toggleHistoryBtn.addEventListener("click", () => {
     historySlider.classList.toggle("open");
     toggleHistoryBtn.innerText = historySlider.classList.contains("open") ? "History" : "History";
 });
-
 
 clearAllBtn.addEventListener("click", () => {
     calcHistory = [];
@@ -26,7 +24,6 @@ function renderHistory() {
         let item = document.createElement("div");
         item.className = "history-item";
         
-    
         let textSpan = document.createElement("span");
         textSpan.className = "history-text";
         textSpan.innerText = calc;
@@ -58,7 +55,7 @@ let buttons = Array.from(document.getElementsByTagName("button"));
 
 buttons.map( button => {
     button.addEventListener('click', (e) => {
-       
+    
        if (e.target.id === "toggleHistory" || e.target.id === "clearAllHistory") return;
 
        switch(e.target.innerText){
